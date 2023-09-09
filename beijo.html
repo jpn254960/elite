@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+</head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+    body{
+        background-color: blueviolet;
+        color: white;    
+        font-size: 20px;
+        font-family: 'League Spartan', sans-serif;
+    }
+    h1{
+        text-align:center
+    }
+    img{
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top:60%;
+        transform: translate(-50%,-50%);
+        }
+    #frente{
+        border-radius: 20px;
+        position: absolute;
+        left: 60%;
+        top:20%;
+        transform: translate(-50%,-50%);
+    
+    }
+    #traz{
+        border-radius: 20px;
+        position: absolute;
+        left: 40%;
+        top: 20%;
+        transform: translate(-50%,-50%);    
+    }
+
+</style>
+<style></style>
+<body>
+    <h1>tá me devendo 4.560.200.234.020</h1>
+    <img src="" alt="img" id="img">
+    <input type="button" id="frente" onclick="frente()">
+    <input type="button" id="traz" onclick="traz()">
+    <script>
+        var img=document.getElementById('img')
+        var s=1
+        link=['WhatsApp Image 2023-09-09 at 03.00.16.jpeg','WhatsApp Image 2023-09-09 at 03.00.20.jpeg','WhatsApp Image 2023-09-09 at 03.00.27.jpeg']
+        img.setAttribute('src',link[0])
+        function carregar(){
+            img.setAttribute('src',link[s-1])
+        }
+        function frente(){
+            if (s+1<=3){
+                s+=1
+            }        
+            carregar()
+        }
+        function traz(){
+            if (s-1>=1){
+                s-=1
+            }
+            carregar()
+        }
+        
+
+        
+
+    </script>
+
+</body>
+</html>
