@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+    body{
+        background-color: blueviolet;
+        font-family: 'League Spartan', sans-serif;
+        text-align:center
+
+    }
+    #botao{
+        background-color: transparent;
+        border-color: white;
+        color: white;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 20px;
+        position: absolute;
+        left: 90%;
+        top: 95%;
+        transform: translate(-50%,-50%);
+        
+    }
+    input{
+        border-radius: 20px;
+        border-color: white;
+    }
+    p{
+        font-size: 20px;
+        font-family: 'League Spartan', sans-serif;
+        color: white;
+
+    }
+    #d1{
+        position: absolute;
+        left: 43%;
+        top: 10%;
+        transform: translate(-50%,-50%);
+    }
+    #r1{
+        position: absolute;
+        left: 40%;
+        top: 20%;
+        transform: translate(-50%,-50%);
+        
+    }
+    #d2{
+        position: absolute;
+        left: 43%;
+        top: 25%;
+        transform: translate(-50%,-50%);
+    }
+    #r2{
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+      
+    }
+    #d3{
+        position: absolute;
+        left: 43%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+    }
+    #r3{
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      
+    }
+    #d4{
+        position: absolute;
+        left: 43%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+    }
+    #r4{
+        position: absolute;
+        left: 40%;
+        top: 65%;
+        transform: translate(-50%,-50%);
+    }
+    #d5{
+        position: absolute;
+        left: 43%;
+        top: 70%;
+        transform: translate(-50%,-50%);
+    }
+    #r5{
+        position: absolute;
+        left: 40%;
+        top: 80%;
+        transform: translate(-50%,-50%);
+      
+    }
+    #d6{
+        position: absolute;
+        left: 43%;
+        top: 85%;
+        transform: translate(-50%,-50%);
+    }
+    #r6{
+        position: absolute;
+        left: 40%;
+        top: 95%;
+        transform: translate(-50%,-50%);
+      
+    }
+
+</style>
+<body>
+    <p id="d1"> qual liguangem eu estudei para fazer seu presente ? </p>
+    <input type="text" name="" id="r1">
+
+   <p id="d2">como tá salvo o seu contato no meu celular ?</p>
+    <input type="text" name="" id="r2">
+
+    <p id="d3">qual jeito que eu odeio ser chamado ?</p>
+    <input type="text" name="" id="r3">
+
+    <p id="d4">que jeito eu gosto que vc me chame ? (dica: esse jeito tbm é um sentimento) </p>
+    <input type="text" name="" id="r4">
+
+    <p id="d5">meu nome completo é ?</p>
+    <input type="text" name="" id="r5">
+
+    <p id="d6">quantas <strong>gatas</strong> eu tenho ?</p>
+    <input type="text" name="" id="r6">  
+
+    <input type="button" value="confirmar" id="botao" onclick="mostrar()">
+
+
+</body>
+<script>
+    function mostrar(){
+        var s=0
+        r=[
+            String(document.getElementById('r1').value),
+            String(document.getElementById('r2').value),
+            String(document.getElementById('r3').value),
+            String(document.getElementById('r4').value),
+            String(document.getElementById('r5').value),
+            String(document.getElementById('r6').value)
+        ]
+        if (r[0]=='js' || r[0]=='javascript'){
+            s+=1
+        } 
+        if (r[1]=='meu tomate'){
+            s+=1
+        }
+        if (r[2]=='joão pedro' || r[2]=='jp'){
+            s+=1
+        }
+        if (r[3]=='amor'){
+            s+=1
+        }
+        if (r[4]=='joão pedro do nascimento deodato'){
+            s+=1
+        }
+        if (r[5]=='uma' || r[5]=='1'){
+            s+=1
+        }
+        if (s==6){
+            open('beijo.html')
+        }
+    }
+</script>
+</html>
