@@ -28,16 +28,14 @@
         left: 50%;
         transform: translate(-50%,-50%);
         font-family: 'League Spartan', sans-serif;
-
     }
     #frente{
         position: absolute;
         height: 20px;
         width: 20px;
-        top: 90%;
+        top: 80%;
         left: 60%;
         border-radius: 10px;
-
         transform: translate(-50%, -50%);
 
     }
@@ -47,12 +45,27 @@
         height: 20px;
         position: absolute;
 
-        top: 90%;
+        top: 80%;
 
         left: 40%;
 
         transform: translate(-50%, -50%);
     }
+    #proximo{
+        width: 100px;
+        height: 25px;
+        border-radius: 20px;
+        background-color: transparent;
+        border-color:white;
+        color: white;
+        font-size: 20px;
+        font-family: 'League Spartan', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%,-50%);
+    }
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -60,10 +73,19 @@
     <title>jujuba</title>
 </head>
 <body>
+    
+    
     <p id='texto'></p>
+    
     <a id="l" href=""> <p>clique aqui para abrir o video surpresa </video></p></a>
+    
     <input type="button" title="<" id="traz" onclick="tras()">
+    
     <input type="button" title=">" id="frente" onclick="frente()" >
+    
+    <a href="desafios.html"><input type="button" value="desafios"  id="proximo"></a>
+    
+    
     <script>
         var voltar=document.getElementById('traz')
         var f = document.getElementById('frente')
