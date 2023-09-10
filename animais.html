@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>depoimentos</title>
+</head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
+    body{
+        background-color: blueviolet;
+        font-family: 'League Spartan', sans-serif;
+    }
+    #fundo{
+        background-color: transparent;
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        left: 55%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+    }
+    #nome{color: transparent;}
+    #bio{color: transparent;}
+    #img{
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    input{
+        border-radius: 20px;
+    }
+    #t{
+        position: absolute;
+        left: 40%;
+        top: 90%;
+        transform: translate(-50%,-50%);  
+    }
+    #a{
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%,-50%);
+    }
+    #h1{
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+<body>
+    <h1 id="h1">depoimentos</h1>
+    <img id="img" src="" alt="" onclick="clicar()">
+    <div id="fundo">
+        <h1 id='nome'></h1>
+        <p id="bio"></p>
+    </div>
+    <input id="t" type="button"  value=">" onclick="frente()">
+    <input  id="a" type="button"  value="<" onclick="traz()">
+</body>
+<script>
+    var img = document.getElementById('img')
+    var fundo = document.getElementById('fundo')
+    var nome = document.getElementById('nome')
+    var bio = document.getElementById('bio')
+    var s = 0
+    var link=["9296e831-6e0b-4079-8a36-b979bda45d6a.jpg","d7e31f5b-d9d5-443f-9cac-3825dbcf27fc.jpg","e24b8716-355c-4c47-951e-dba4a04449c5.jpg","efce5643-dd42-4ddf-8dfd-b76b71a2a036.jpg","fc132394-ca1c-44b7-84fc-5f5d20d2fb08.jpg"]
+    var n=['thor','nemo','juju','clovis','romeu']
+    var d=['de acordo com o joão vc tem um cheiro não muito bom','amo seus carinhos e amo vc','apesar de ter te mordido eu te amo','mamãe o papai é doido ele fica candando do nada me tira da casa dele por favor','oiiiiii eu sou o romeu eu te amo muito adoro morder seu pé pos eu gosto de pés']
+    var c=0
+
+    img.setAttribute('src',link[s])
+    nome.innerText=n[s]
+    bio.innerText=d[s]
+
+    img.addEventListener('mouseover',bios)         
+    img.addEventListener('mouseout',sair)
+    function bios(){
+        fundo.style.backgroundColor='white'
+        nome.style.color='black'
+        bio.style.color='black'
+        
+    }
+    
+    function sair(){
+        fundo.style.background='transparent'
+        nome.style.color='transparent'
+        bio.style.color='transparent'
+
+    }
+    
+    function caregar(){
+        img.setAttribute('src',link[s])
+        nome.innerText=n[s]
+        bio.innerText=d[s]
+    }
+    function frente(){
+        if (s+1<=link.length-1){
+            s+=1
+        }
+        caregar()
+
+    }
+    function traz(){
+        if(s-1>=0){
+            s-=1
+        }
+        caregar()
+    }
+    function clicar(){
+       if (c==0){
+        fundo.style.backgroundColor='white'
+        nome.style.color='black'
+        bio.style.color='black'
+        c=1 
+       } else{
+        c=0
+        fundo.style.background='transparent'
+        nome.style.color='transparent'
+        bio.style.color='transparent'
+       }
+    }
+</script>
+</html>
