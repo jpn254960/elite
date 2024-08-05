@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joj</title>
+</head>
+
+<style>
+    body{
+        background-color: rgba(30, 142, 207, 0.836);
+        text-align: center;
+        font-size: 4vw;
+    }
+    img{
+        width: 25vw;
+        height: 25vw;
+        object-fit: cover;
+        margin: auto;
+    }
+</style>
+
+<body>
+
+<section id='tela'>
+    <h1 id="tempo">59</h1>
+    <h1 id="p">0</h1>
+    <img src="" alt="" id="i1" onclick="at(1)">
+    <img src="" alt="" id="i2" onclick="at(2)">
+    <img src="" alt="" id="i3" onclick="at(3)">
+    <img src="" alt="" id="i4" onclick="at(4)">
+</html>
+</body>
+<script>
+
+    var ids=[document.getElementById('i1'),
+    document.getElementById('i2'),
+    document.getElementById('i3'),
+    document.getElementById('i4')]
+    var imgs=['peperone.png','massa.png','frango.png','queijo.png']
+    var certa=0
+    function reiniciar(){
+        imgs=['peperone.png','massa.png','frango.png','queijo.png']
+        ids=[document.getElementById('i1'),
+    document.getElementById('i2'),
+    document.getElementById('i3'),
+    document.getElementById('i4')]
+        certa=sort(0,3)
+        ids[certa].src=imgs[certa]
+         var c=0
+         ids.splice(certa,1)
+         imgs.splice(certa,1)
+         errada=sort(0,2)
+         while (c!=3){
+             ids[c].src=imgs[errada]
+             c++
+        }
+    }
+
+    reiniciar()
+    function at(s){
+        if (s==certa+1){
+            var p=parseInt(document.getElementById('p').innerText)
+            console.log(p)
+            p++
+            document.getElementById('p').innerText=p
+            reiniciar()
+        }else{
+            var p=parseInt(document.getElementById('p').innerText)
+            console.log(p)
+            p--
+            document.getElementById('p').innerText=p
+            reiniciar()
+        }
+    }
+    function sort(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    setInterval(function(){
+        var p=parseInt(document.getElementById('tempo').innerText)
+            console.log(p)
+            p--
+            document.getElementById('tempo').innerText=p
+            if (p==0){
+                document.write(`sua pontuação foi de ${document.getElementById('p').innerText}`)
+            }
+    },1000)
+
+
+</script>
